@@ -1,0 +1,56 @@
+{
+  "name": "calcula-blksize",
+  "displayName": "Calcula BLKSIZE",
+  "description": "Calcula BLKSIZE óptimo y propone almacenamiento en cilindros para datasets MVS/z/OS",
+  "version": "1.0.0",
+  "publisher": "CCASTI10",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages"
+  ],
+  "keywords": [
+    "cobol",
+    "jcl",
+    "mainframe",
+    "blksize",
+    "mvs",
+    "zos"
+  ],
+  "activationEvents": [
+    "onCommand:cobol-blksize.calculate",
+    "onCommand:cobol-blksize.insertJCL"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cobol-blksize.calculate",
+        "title": "Calcula BLKSIZE y espacio en cilindros",
+        "category": "COBOL",
+        "icon": "$(calculator)"
+      },
+      {
+        "command": "cobol-blksize.insertJCL",
+        "title": "Insertar/Calcular BLKSIZE en JCL",
+        "category": "COBOL",
+        "icon": "$(insert)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "cobol-blksize.insertJCL",
+        "key": "ctrl+alt+b",
+        "mac": "cmd+alt+b"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Christian Castillo",
+  "license": "MIT"
+}
